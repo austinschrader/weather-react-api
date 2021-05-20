@@ -20,6 +20,16 @@ class App extends React.Component {
       .get(`forecast?q=${city}&appid=${process.env.REACT_APP_API_KEY}`)
       .then((res) => {
         const temp = res.data.list;
+
+        const mornTemp = res.data.list.filter((element, index) => {
+          return (
+            index === 1 ||
+            index === 9 ||
+            index === 17 ||
+            index === 25 ||
+            index === 33
+          );
+        });
       });
   };
 
