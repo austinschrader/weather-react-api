@@ -93,6 +93,9 @@ class App extends React.Component {
 
     return (
       <div className='App'>
+        <React.Fragment>
+          <Search city={this.state.city} searchCity={this.searchCity} />
+        </React.Fragment>
         <ClimateResults
           day={'Thu'}
           mornTemp={mornTemp[0]}
