@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import weather from '../apis/api';
+import kelvinToFahrenheit from 'kelvin-to-fahrenheit';
 
 class App extends React.Component {
   constructor(props) {
@@ -64,6 +65,10 @@ class App extends React.Component {
   };
 
   render() {
+    const mornTemp = this.state.mornTemp.map((element) => {
+      return parseInt(kelvinToFahrenheit(element.main.temp));
+    });
+
     return <div className='App'></div>;
   }
 }
