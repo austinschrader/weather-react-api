@@ -30,6 +30,16 @@ class App extends React.Component {
             index === 33
           );
         });
+
+        const dayTemp = res.data.list.filter((element, index) => {
+          return (
+            index === 3 ||
+            index === 11 ||
+            index === 19 ||
+            index === 27 ||
+            index === 35
+          );
+        });
       });
   };
 
