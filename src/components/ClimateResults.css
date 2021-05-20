@@ -1,0 +1,9 @@
+.weatherContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.ClimateResults {
+  margin: 0 15px;
+  transition: 0.3s all ease;
+}
