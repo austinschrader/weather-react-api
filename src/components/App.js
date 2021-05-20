@@ -40,6 +40,26 @@ class App extends React.Component {
             index === 35
           );
         });
+
+        const nightTemp = res.data.list.filter((element, index) => {
+          return (
+            index === 5 ||
+            index === 13 ||
+            index === 21 ||
+            index === 29 ||
+            index === 37
+          );
+        });
+
+        const city = res.data.city.name;
+
+        this.setState({
+          mornTemp,
+          dayTemp,
+          nightTemp,
+          temp,
+          city,
+        });
       });
   };
 
