@@ -9,6 +9,14 @@ const ClimateResults = (props) => {
       <Card>
         <CardContent>
           <div>{props.day}</div>
+          <Temp
+            mornTemp={props.mornTemp}
+            dayTemp={props.dayTemp}
+            nightTemp={props.nightTemp}
+            minTemp={props.minTemp}
+            maxTemp={props.maxTemp}
+            humidity={props.humidity}
+          />
         </CardContent>
       </Card>
     </div>
