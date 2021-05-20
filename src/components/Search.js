@@ -7,23 +7,13 @@ class Search extends React.Component {
   state = {
     city: '',
   };
-
-  onSubmit = (e) => {
-    e.preventDefault();
-
-    if (this.state.city === '') {
-      alert('City can not be empty');
-    } else {
-      this.props.searchCity(this.state.city);
-    }
-  };
-
+  
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
     return (
       <div className='Search'>
-        <div className='SearchChilds'>
+        <div className='SearchInput'>
           <h5 className='text-white'>Search weather for your city</h5>
 
           <form onSubmit={this.onSubmit} className='formSearchCity'>
