@@ -7,7 +7,17 @@ class Search extends React.Component {
   state = {
     city: '',
   };
-  
+
+  onSubmit = (e) => {
+    e.preventDefault();
+
+    if (this.state.city === '') {
+      alert('City can not be empty');
+    } else {
+      this.props.searchCity(this.state.city);
+    }
+  };
+
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
   render() {
