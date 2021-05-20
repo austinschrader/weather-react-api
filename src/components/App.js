@@ -69,6 +69,26 @@ class App extends React.Component {
       return parseInt(kelvinToFahrenheit(element.main.temp));
     });
 
+    const dayTemp = this.state.dayTemp.map((element) => {
+      return parseInt(kelvinToFahrenheit(element.main.temp));
+    });
+
+    const nightTemp = this.state.nightTemp.map((element) => {
+      return parseInt(kelvinToFahrenheit(element.main.temp));
+    });
+
+    const minTemp = this.state.mornTemp.map((element) => {
+      return parseInt(kelvinToFahrenheit(element.main.temp_min));
+    });
+
+    const maxTemp = this.state.temp.map((element) => {
+      return parseInt(Math.max(kelvinToFahrenheit(element.main.temp_max)));
+    });
+
+    const humidity = this.state.temp.map((element) => {
+      return parseInt(Math.max(kelvinToFahrenheit(element.main.humidity)));
+    });
+
     return <div className='App'></div>;
   }
 }
