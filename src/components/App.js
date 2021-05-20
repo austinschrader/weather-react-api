@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import weather from '../apis/api';
+import ClimateResults from './ClimateResults';
+import Search from './Search';
 import kelvinToFahrenheit from 'kelvin-to-fahrenheit';
 
 class App extends React.Component {
@@ -89,7 +91,55 @@ class App extends React.Component {
       return parseInt(Math.max(kelvinToFahrenheit(element.main.humidity)));
     });
 
-    return <div className='App'></div>;
+    return (
+      <div className='App'>
+        <ClimateResults
+          day={'Thu'}
+          mornTemp={mornTemp[0]}
+          dayTemp={dayTemp[0]}
+          nightTemp={nightTemp[0]}
+          minTemp={minTemp[0]}
+          maxTemp={maxTemp[0]}
+          humidity={humidity[0]}
+        />
+        <ClimateResults
+          day={'Fri'}
+          mornTemp={mornTemp[1]}
+          dayTemp={dayTemp[1]}
+          nightTemp={nightTemp[1]}
+          minTemp={minTemp[1]}
+          maxTemp={maxTemp[1]}
+          humidity={humidity[1]}
+        />
+        <ClimateResults
+          day={'Sat'}
+          mornTemp={mornTemp[2]}
+          dayTemp={dayTemp[2]}
+          nightTemp={nightTemp[2]}
+          minTemp={minTemp[2]}
+          maxTemp={maxTemp[2]}
+          humidity={humidity[2]}
+        />
+        <ClimateResults
+          day={'Sun'}
+          mornTemp={mornTemp[3]}
+          dayTemp={dayTemp[3]}
+          nightTemp={nightTemp[3]}
+          minTemp={minTemp[3]}
+          maxTemp={maxTemp[3]}
+          humidity={humidity[3]}
+        />
+        <ClimateResults
+          day={'Mon'}
+          mornTemp={mornTemp[4]}
+          dayTemp={dayTemp[4]}
+          nightTemp={nightTemp[4]}
+          minTemp={minTemp[4]}
+          maxTemp={maxTemp[4]}
+          humidity={humidity[4]}
+        />
+      </div>
+    );
   }
 }
 
